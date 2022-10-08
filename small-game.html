@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function start(){
+    document.getElementById("p2").style.animationPlayState="running";
+    document.getElementById("p3").style.animationPlayState="running";
+    
+   
+    
+    document.getElementById("eyeleft").style.animationPlayState="running";
+     document.getElementById("eyeright").style.animationPlayState="running";
+     document.getElementById("face").style.animationPlayState="running";
+     document.getElementById("mouth").style.animationPlayState="running";
+     document.getElementById("line").style.animationPlayState="running";
+     document.getElementById("flowerleft").style.animationPlayState="running";
+     document.getElementById("flowerright").style.animationPlayState="running";
+    
+    document.getElementById("eyeleft").style.opacity="1";
+     document.getElementById("eyeright").style.opacity="1";
+     document.getElementById("face").style.opacity="1";
+     document.getElementById("mouth").style.opacity="1";
+     document.getElementById("line").style.opacity="1";
+     document.getElementById("flowerleft").style.opacity="1";
+     document.getElementById("flowerright").style.opacity="1";
+    document.getElementById("bow").style.opacity="0";
+    document.getElementById("finish").style.opacity="0";
+    document.getElementById("ha").innerHTML="";
+    document.getElementById("haa").innerHTML="Start";
+    document.getElementById("starttime").innerHTML="開始";
+     document.getElementById("p6").style.opacity="0";
+    document.getElementById("p1").style.opacity="1";
+    globalThis.a = new Date(); 
+    
+    
+}
+
+function time(){
+    document.getElementById("haa").innerHTML="";
+    var c = new Date();
+    d = c - a;
+    min = parseInt(d/1000/60);
+    sec=(d-min*60*1000)/1000;
+    sec=Math.round(sec);
+    document.getElementById("ha").innerHTML="耗時: "+min+"m"+sec+"s";
+    
+    
+     
+     document.getElementById("eyeleft").style.opacity="0";
+     document.getElementById("eyeright").style.opacity="0";
+     document.getElementById("face").style.opacity="0";
+     document.getElementById("mouth").style.opacity="0";
+     document.getElementById("line").style.opacity="0";
+     document.getElementById("flowerleft").style.opacity="0";
+     document.getElementById("flowerright").style.opacity="0";
+    
+    document.getElementById("p2").style.animationPlayState="paused";
+    document.getElementById("p3").style.animationPlayState="paused";
+    document.getElementById("finish").style.opacity="1";
+    document.getElementById("bow").style.opacity="1";
+    document.getElementById("finish").innerHTML="Hope you have a good day!";
+    document.getElementById("starttime").innerHTML="再玩一次";
+}
+function goon(){
+    document.getElementById("eyeleft").style.animationPlayState="running";
+     document.getElementById("eyeright").style.animationPlayState="running";
+     document.getElementById("face").style.animationPlayState="running";
+     document.getElementById("mouth").style.animationPlayState="running";
+     document.getElementById("line").style.animationPlayState="running";
+     document.getElementById("flowerleft").style.animationPlayState="running";
+     document.getElementById("flowerright").style.animationPlayState="running";
+    document.getElementById("p2").style.animationPlayState="running";
+    document.getElementById("p3").style.animationPlayState="running";
+}
+function pause(){
+    document.getElementById("eyeleft").style.animationPlayState="paused";
+     document.getElementById("eyeright").style.animationPlayState="paused";
+     document.getElementById("face").style.animationPlayState="paused";
+     document.getElementById("mouth").style.animationPlayState="paused";
+     document.getElementById("line").style.animationPlayState="paused";
+     document.getElementById("flowerleft").style.animationPlayState="paused";
+     document.getElementById("flowerright").style.animationPlayState="paused";
+    document.getElementById("p2").style.animationPlayState="paused";
+    document.getElementById("p3").style.animationPlayState="paused";
+    
+}
+
+</script>
+    
+<style>
+div#eyeleft{position: absolute;
+        background-image:url(未命名.png);
+        width:400px;
+        height:50px;        
+        top: 250px;
+        left: 360px;
+        background-size: cover;
+        transform: skew(45deg, 0deg);
+        transform: scaleY(2);
+        opacity: 0;
+    animation: eyeleft 5s;
+    animation-timing-function: linear;
+     animation-iteration-count: infinite;
+    animation-play-state: paused;
+    }
+    div#face{
+        position: absolute;
+        background-image:url(face.png);
+        width:490px;
+        height:500px;        
+        top: 20px;
+        left: 250px;
+        background-size: cover;
+        opacity: 0;
+        animation: face 5s;
+        animation-timing-function: linear;
+    animation-iteration-count: infinite;
+        animation-play-state: paused;
+    }
+div#eyeright{position: absolute;
+        background-image:url(未命名.png);
+        width:450px;
+        height:500px;        
+        top: 470px;
+        left: 500px;
+        background-size: cover;
+        transform: skew(-45deg, 0deg);
+       transform: scaleY(2);
+    opacity: 0;
+    animation: eyeright 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+        
+    }
+div#mouth{position: absolute;
+        background-image:url(mouth.png);
+        width:220px;
+        height:220px;        
+        top: 270px;
+        left: 380px;
+    opacity: 0;
+        background-size: cover;
+    transform: scaleX(1.2) ;
+    animation: mouth 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    }
+div#line{position:relative;
+    border:10px solid;
+  border-color:gainsboro;
+    border-style:ridge;
+  width: 500px;
+  height:500px;
+  top:0vh;
+  left: 230px;
+    opacity: 0;
+  animation: line 5s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    }
+div#flowerleft{
+        position: absolute;
+        background-image:url(flower.png);
+        width:100px;
+        height:100px;        
+        top: 400px;
+        left: 260px;
+        background-size: cover;
+    opacity: 0;
+        animation: flower 5s;
+        animation-iteration-count: infinite;
+    animation-play-state: paused;
+    }
+div#flowerright{
+        position: absolute;
+        background-image:url(flower.png);
+        width:100px;
+        height:100px;        
+        top: 400px;
+        left: 630px;
+        background-size: cover;
+        opacity: 0;
+        animation: flower 5s;
+        animation-iteration-count: infinite;
+    animation-play-state: paused;
+    }
+    div#gun{
+        position:absolute;
+        background-image: url(74944235-8b6e-48dd-8ba4-b6e554fdd647_m.jpg);
+        width:120px;
+        height:100px; 
+        top: 0vh;
+        left: 92vw;
+        background-size: cover;
+        border-radius: 10px;
+        filter:grayscale(0.7);
+        filter: opacity(60%);
+    }
+     div#bullet{
+        position:absolute;
+        background-image: url(bullet.png);
+        width:70px;
+        height:50px; 
+        top: 5vh;
+        left: 92vw;
+        background-size: cover;
+            transform: skew(0deg, -10deg);
+         filter: opacity(0%);
+         cursor: pointer;
+    }
+    div#bullet:active{
+        animation: bullet 3s;
+    }
+    p{position: absolute;
+        top:85vh;
+        filter:grayscale(0.1);
+        filter: opacity(80%);
+        transform:scaleX(-1);
+        
+        }
+    div#timestart{
+        position: absolute;
+        top:25vh;
+        right: 19vw;
+        
+    }
+    div#continue{
+        position: absolute;
+        top:30vh;
+        right: 15vw;
+    }
+    div#timeend{
+        position: absolute;
+        top:30vh;
+        right: 19vw;
+    }
+    div#pause{
+        position: absolute;
+        top:25vh;
+        right: 15vw;
+    }
+    p5{
+        position:absolute;
+        top:25vh;
+        right: 2vw;
+        color:yellow;
+        font-size:30px;
+        background-color: coral;
+    }
+    p4{
+        position:absolute;
+        top:25vh;
+        right: 6vw;
+        color:red;
+        font-size:50px;
+        background-color:floralwhite;
+    }
+    div#finish{
+        position:absolute;
+        top:20%;
+        left:20%;
+        background-color: deepskyblue;
+        font-size:50px;
+    }
+ @keyframes eyeright{
+  0%   {top: 470px;
+        left: 500px;
+        width:450px;
+        height:500px;
+        }
+  20%{top: 90%;
+        left: 10px;
+        width:100%;
+        height:50px;
+     }
+    50%{top: 10%;
+        left: 100px;
+        width:20%;
+        height:50px;
+     }
+  100% { top: 470px;
+        left:500px;
+        width:450px;
+        height:500px;
+     filter:grayscale(1);}
+     }
+ @keyframes eyeleft{
+  0%   {top: 250px;
+        left: 360px;
+        width:400px;
+        height:50px;
+        }
+  20%{top: 20%;
+        left: 60px;
+        width:10%;
+        height:50px;}
+    50%{top: 80%;
+        left: 100px;
+        width:50%;
+        height:50px;
+     }
+
+100%   {top: 250px;
+        left: 360px;
+        width:400px;
+        height:50px;
+        filter:grayscale(1);}}
+  
+ @keyframes face{
+  0%   {top: 20px;
+        left: 250px;
+        width:490px;
+        height:500px;
+        }
+  20%{top: 30px;
+        left: 150px;
+        width:490px;
+        height:500px;}
+    50%{top: 500px;
+        left: 500px;
+        width:490px;
+        height:500px;}
+  100% { top: 20px;
+        left:250px;
+        width:490px;
+        height:500px;
+     filter:grayscale(1);}
+     }
+    @keyframes mouth{
+  0%   { top: 270px;
+        left: 380px;
+        }
+  25%{left: 180px;}
+  75% {left:500px;}
+  100%{ top: 270px;
+        left: 380px;
+        filter:grayscale(0.8);}}
+@keyframes line{
+  0%   {border-color:gainsboro;}
+  25%{border-color:darkslategray;
+      width:200px;
+      left:0px;
+    }
+  75% {border-color:deeppink;
+    width:800px;
+    top:20vh;
+    height;200px}
+  100%{border-color:gray;
+    background-color:rgba(100,98,100,0.5)}
+    }
+    
+    @keyframes flower{
+        0%{filter: saturate(100%);
+          transform: rotate(150deg);}
+        50%{filter: saturate(54%);
+        transform: rotate(100deg);}
+        100%{filter: saturate(10%);
+            transform: rotate(150deg);}
+    }
+         @keyframes bullet{
+        0%{top:10vh;
+            left:92vw;}
+         1%{top:10vh;
+            left:92vw;
+            filter: opacity(100%);
+          }
+         49%{top:90vh;
+         left:3vw;
+            filter: opacity(100%);
+             background-image:url(bullet.png);}
+              50%{top:90vh;
+              left:3vw;
+            background-image:url(boom.png);
+                  transform: skew(0deg, 0deg);}
+                  100%{top:90vh;
+                       left:3vw;
+              background-image:url(boom.png);}
+             }
+   
+    body::-webkit-scrollbar {
+    display: none;
+}
+    p1{position: absolute; 
+        top:35vh;
+        right: 3vw;
+        background-color:#FBF857;
+        border:8px solid;
+        border-radius: 10px;
+        border-color:deepskyblue; 
+    opacity: 0;}
+    p2{position: absolute; 
+        top:75vh;
+        right: 5.5vw;
+        background-color:#FBF857;
+        border:8px solid;
+        border-radius: 10px;
+        border-color:deepskyblue;
+        animation: delay 5s;
+    animation-fill-mode: none;
+    animation-play-state: paused;}
+    h{animation: delay 5s;
+    animation-play-state: paused}
+    p6{position: absolute;
+        top:20%;
+    left: 20%;
+    font-size: 30px;
+    color:chocolate;
+    background-color:floralwhite;
+    border:8px solid;
+    border-radius: 10px;
+    border-color:deepskyblue; 
+    }
+    @keyframes delay{
+        0%{opacity:0;}
+        85%{opacity:0;}
+        100%{opacity: 1;}}
+    div#bow{
+        position: absolute;
+        top:40%;
+        left:10%;
+        opacity: 0;   
+    }
+    </style>
+    </head>
+
+    <body style="background-image:url(images.jfif) ;">
+        <div id="finish"></div>
+        <p><img src="maxresdefault.jpg"  usemap="#funny"  width="120px" height = "70px"  ;></p>
+        <map name="funny">
+        <area shape="rect" coords="0,0,90,70" href="完整圖.png"></map>
+        
+        <h id = "p3" style="font-size: 30px; color:rgba(78,65,5);font-weight:bold; " >tips&#x27A1;&#x27A1;</h>
+        <div id='line' ></div>
+        
+        <div id='face' '></div>
+        <div id='eyeleft'></div>
+        <div id='eyeright'></div>
+        <div id='mouth'></div>
+        <div id = 'flowerleft'></div>
+        <div id = 'flowerright'></div>
+        
+        <div id = 'gun'></div>
+        <div id='bullet'></div>
+        <p1 id="p1" style="font-size: 40px;color:#1443F9;text-align:center;">Please pause<br>"暫停"<br>while the face <br>be a face.&#128540</p1>
+        <div id="timestart">
+        <button id="starttime" onclick = "start()">開始</button><br><br>
+                        </div>
+        <div id="timeend">
+         <button onclick="time()">結束</button>
+                        </div>
+        <div id="continue">
+                        <button onclick="goon()">繼續</button></div>
+                       
+        <div id="pause">
+         <button onclick="pause()">暫停</button>
+                        </div>
+         <div id ="bow">               
+        <img src="bow.png"></img>
+                        </div>
+        <p6 id="p6">歡迎來到遊戲間<br>規則如下:<br>1.開始請按"開始"建<br>2.當圖片快要變成一顆完整的頭時按"暫停"鍵<br>3.如果失敗請按"繼續"鍵<br>4.當結束時按"結束"鍵<br>5.我們將告訴你耗時多久<br>歡迎和朋友互相比較喔.</p6>
+        <p4 id="haa"></p4>
+        <p5 id="ha"></p5>
+        <p2 id="p2" style="font-size: 30px;color:#1443F9;text-align:center;">To difficult?<br> Find some clue.</p1>
+       
+    </body>
